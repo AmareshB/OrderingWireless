@@ -173,10 +173,10 @@
 				
 				<div class="form-group">
 					<div align="right"><button type="submit"value="checkout">
-						<a href="check_form_json"><img src="img/checkout.png"
+						<img src="img/checkout.png"
 							onmouseover="this.src='img/checkout.png'"
 							onmouseout="this.src='img/checkoutunclicked.png'" width="200px"
-							height="50px" /></a>
+							height="50px" />
 					</div>
 				</div>
 			</form>
