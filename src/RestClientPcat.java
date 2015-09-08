@@ -10,7 +10,7 @@ import java.net.URL;
  
 public class RestClientPcat {
 
-    private static final String pCatURL = "http://localhost:8080/PCatServiceCatalog/api/Consumer";
+    private static final String pCatURL = "http://localhost:8080/PCatServiceCatalogue/api/Consumer";
     
      
     public String callPCatURL(String input) {
