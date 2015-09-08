@@ -99,7 +99,7 @@ public class RegistrationServlet extends HttpServlet {
 		OrderingJSON orderJson = new OrderingJSON(customerdetails, orderdetails, contractdetails);
 		String json = gson.toJson(orderJson);		
 		
-		System.out.println(json);
+		System.out.println("JSON is: " + json);
 		RESTClient client = new RESTClient();	
 		
 		client.insert(json);		
