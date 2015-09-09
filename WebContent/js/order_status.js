@@ -22,7 +22,7 @@ $.ajax({
     	str = JSON.stringify(data);    	   	
 		var jsonObj = JSON.parse(str);
 		var jsonObj1 = jsonObj.customerdetails;
-		var jsonObj2 = jsonObj.orderhistory;
+		var jsonObj2 = jsonObj.orderhistory;		
 		document.getElementById("custid").value = (jsonObj1.customerid);
 		document.getElementById("firstname").value = (jsonObj1.fname);
 		document.getElementById("lastname").value = (jsonObj1.lname);

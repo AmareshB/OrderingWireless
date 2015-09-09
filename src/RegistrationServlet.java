@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.json.*;
@@ -53,12 +54,14 @@ public class RegistrationServlet extends HttpServlet {
 			cust_type = "new";
 		}
 		else
+		{
 			cust_type = "registered";
-		
+			cust_id = Integer.parseInt(request.getParameter("cust_id"));
+		}
 		Date date = new Date();
 		DateFormat inFormat = new SimpleDateFormat("yyyy-mm-dd");
 		DateFormat outFormat = new SimpleDateFormat("dd-MMM-yyyy");
-		cust_id = Integer.parseInt(request.getParameter("cust_id"));  
+		System.out.println("CID: " + request.getParameter("cust_id"));  
 		String fname = request.getParameter("firstname");  
 		String lname = request.getParameter("lastname");  
 		String street = request.getParameter("streetname");
@@ -68,7 +71,7 @@ public class RegistrationServlet extends HttpServlet {
 		String country = request.getParameter("country");			
 
 		//TODO Write code for proper State ID		
-		int stateid = 0; 
+		int stateid = 1; 
 		
 		String email = request.getParameter("email");
 		Date dob = null;
@@ -101,11 +104,15 @@ public class RegistrationServlet extends HttpServlet {
 		
 		System.out.println("JSON is: " + json);
 		RESTClient client = new RESTClient();	
-		
+		System.out.println("Inserting...");
 		client.insert(json);		
-		
-		//TODO Redirect to order summary page.
-		 RequestDispatcher rd = request.getRequestDispatcher("order_summary.jsp");
+		System.out.println("Data Inserted");
+		//Redirect to order summary page.
+		HttpSession session=request.getSession();
+		session.setAttribute("email",String.valueOf(email));
+		System.out.println(session.getAttribute("email"));
+		RequestDispatcher rd = request.getRequestDispatcher("order_summary.jsp");
 		 rd.forward(request, response);
+		 
 	}		
 }

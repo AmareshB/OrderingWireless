@@ -54,7 +54,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username"><% String firstName= session.getAttribute("rep_username").toString();
+                            <span class="username"><% String firstName= session.getAttribute("email").toString();
      out.println(firstName);%></span>
                             <b class="caret"></b>
                         </a>

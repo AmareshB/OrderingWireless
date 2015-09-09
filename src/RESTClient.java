@@ -14,6 +14,7 @@ public class RESTClient {
 	//TODO change URL to server IP Address 
     private static final String insertURL = "http://localhost:8080/OrderManagement/rest/om/submitorder";
     private static final String checkURL = " http://localhost:8080/OrderManagement/rest/om/profilePull/email/";
+    private static final String orderURL = "http://localhost:8080/OrderManagement/rest/om/order/";
     public void insert(String input) {
         try {
             URL insertUrl = new URL(insertURL);           
