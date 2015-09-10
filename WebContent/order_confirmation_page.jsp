@@ -102,11 +102,20 @@
 										</div></label>
 				</div>
 				<div class="form-group ">
-					<label for="plan" class="control-label col-lg-2">Plan Name
+					<label for="plan" class="control-label col-lg-2">Plan Id
 					</label> <label><div class="col-lg-10">
 											<textarea readonly style="overflow:hidden;resize:none" class=" form-control" rows="1" cols="100" id="plan" name="plan" ><%=request.getAttribute("plan") %></textarea>
 										</div></label>
 				</div>
+				
+				
+				<div class="form-group ">
+					<label for="plan_name" class="control-label col-lg-2">Plan Name
+					</label> <label><div class="col-lg-10">
+											<textarea readonly style="overflow:hidden;resize:none" class=" form-control" rows="1" cols="100" id="plan_name" name="plan_name" ><%=request.getAttribute("plan_name") %></textarea>
+										</div></label>
+				</div>
+				
 				<div class="form-group ">
 					<label for="firstname" class="control-label col-lg-2">First
 						name </label> <label><div class="col-lg-10">

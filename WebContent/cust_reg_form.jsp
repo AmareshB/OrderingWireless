@@ -162,7 +162,7 @@
 											<span class="required">*</span>
 										</label>
 										<div class="col-lg-10">
-										<%String email = (String)request.getAttribute("email"); 
+										<%String email = (String)request.getAttribute("mail"); 
 												if(email==null){
 												%>
 							
@@ -236,7 +236,7 @@
 											<span class="required">*</span>
 										</label>
 										<div class="col-lg-10">
-										<%String bstate = (String)request.getAttribute("state"); 
+										<%String bstate = (String)request.getAttribute("location"); 
 												if(bstate==null){
 												%>
 							
@@ -298,7 +298,17 @@
 										<div class="col-lg-10">
 											 <textarea readonly style="overflow:hidden;resize:none" class=" form-control" rows="1" cols="100" id="order_type" name="order_type" ><%=request.getParameter("order_name") %></textarea>
 										</div>
+										
+										
 									</div>
+									<div class="form-group ">
+									<label for="plan_name" class="control-label col-lg-2">Plan_name <span class="required"></span>
+										</label>
+										<div class="col-lg-10">
+											 <textarea readonly style="overflow:hidden;resize:none" class=" form-control" rows="1" cols="100" id="plan_name" name="plan_name" ><%=request.getParameter("plan_name") %></textarea>
+										</div>
+										</div>
+										
 									<div class="form-group ">
 										<label for="plan" class="control-label col-lg-2">Plan Selected <span class="required"></span>
 										</label>

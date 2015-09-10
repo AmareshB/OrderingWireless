@@ -16,6 +16,9 @@ function validate() {
 	var ssn=document.registration.ssn;
 	var plan=document.registration.plan;
 	var order_type=document.registration.order_type;
+	
+	var plan_name=document.registration.plan_name;
+	
 	var contact_number=document.registration.contact_number;
 	var number= /^[0-9]+$/;
 	var letters = /^[a-zA-Z]*$/;
@@ -153,11 +156,11 @@ function validate() {
 	}
     
     else {
- 
+// alert(plan_name.value);
         document.location.href="new_cust_ssn?ssn="+ssn.value+"&&firstname="+firstname.value+"&&lastname="+lastname.value+
                                 "&&streetname="+streetname.value+"&&zipcode="+zipcode.value+"&&city="+city.value+"&&state="+state.value+
                                 "&&country=United States Of America &&email="+email.value+"&&dob="+dob.value+"&&ssn="+ssn.value+
-                                "&&plan="+plan.value+"&&order_type="+order_type.value+"&&contact_number="+contact_number.value+
+                                "&&plan="+plan.value+ "&&plan_name="+plan_name.value+"&&order_type="+order_type.value+"&&contact_number="+contact_number.value+
                                 "&&cust_id="+cust_id.value+"&&cust_type="+cust_type.value; 
 //alert("SUCCESS")
     }

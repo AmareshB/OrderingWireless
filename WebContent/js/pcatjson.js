@@ -12,7 +12,7 @@ function withequip(value, order_name) {
 	// var value="<%= session[\"location\"].ToString() %>";
 	console.log(value);
 	console.log(order_name);
-	var plan_type;
+	var plan_type,plan_name;
 	// get the form data and then serialize that
 	dataString = $("#someform").serialize();
 var ordername=order_name+"&d=data";
@@ -71,6 +71,7 @@ var ordername=order_name+"&d=data";
 									function() {
 										console.log(this.id);
 										plan_type = this.id;
+										plan_name=this.name;
 										str = JSON.stringify(data);
 										var jsonObj = JSON.parse(str);
 										var jsonObj1 =jsonObj.Bundle_Details;
@@ -102,7 +103,9 @@ var ordername=order_name+"&d=data";
 													location.href = "cust_reg_form.jsp?order_name="
 															+ order_name
 															+ "&plan_type="
-															+ plan_type;
+															+ plan_type
+															+"&plan_name="
+															+plan_name;
 												};
 
 											}
@@ -152,7 +155,7 @@ function individual_plan(value, order_name) {
 	// var value="<%= session[\"location\"].ToString() %>";
 	console.log(value);
 	console.log(order_name);
-	var plan_type;
+	var plan_type,plan_name;
 	// get the form data and then serialize that
 	dataString = $("#someform").serialize();
 
@@ -228,6 +231,7 @@ function individual_plan(value, order_name) {
 									function() {
 										console.log(this.id);
 										plan_type = this.id;
+										plan_name=this.name;
 										str = JSON.stringify(data);
 										var jsonObj = JSON.parse(str);
 										var jsonObj1 =jsonObj.Product_Details;
@@ -259,7 +263,9 @@ function individual_plan(value, order_name) {
 													location.href = "cust_reg_form.jsp?order_name="
 															+ order_name
 															+ "&plan_type="
-															+ plan_type;
+															+ plan_type
+															+"&plan_name="
+															+plan_name;
 												};
 
 											}
@@ -309,7 +315,7 @@ function group_plan(value, order_name) {
 	// var value="<%= session[\"location\"].ToString() %>";
 	console.log(value);
 	console.log(order_name);
-	var plan_type;
+	var plan_type,plan_name;
 	// get the form data and then serialize that
 	dataString = $("#someform").serialize();
 
@@ -382,6 +388,7 @@ function group_plan(value, order_name) {
 									function() {
 										console.log(this.id);
 										plan_type = this.id;
+										plan_name=this.name;
 										str = JSON.stringify(data);
 										var jsonObj = JSON.parse(str);
 										var jsonObj1 =jsonObj.Product_Details;
@@ -413,7 +420,9 @@ function group_plan(value, order_name) {
 													location.href = "cust_reg_form.jsp?order_name="
 															+ order_name
 															+ "&plan_type="
-															+ plan_type;
+															+ plan_type
+															+"&plan_name="
+															+plan_name;
 												};
 
 											}

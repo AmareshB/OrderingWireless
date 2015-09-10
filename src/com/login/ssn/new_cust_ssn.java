@@ -88,6 +88,10 @@ HttpSession session;
 		System.out.println(plan);
 		request.setAttribute("plan", plan);
 		
+		String plan_name=request.getParameter("plan_name");
+		System.out.println("aaa"+plan_name);
+		request.setAttribute("plan_name", plan_name);
+		
 		String contact_number=request.getParameter("contact_number");
 		System.out.println(contact_number);
 		request.setAttribute("contact_number", contact_number);

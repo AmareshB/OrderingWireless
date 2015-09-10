@@ -84,7 +84,9 @@ public class RegistrationServlet extends HttpServlet {
 		long contact = Long.parseLong(request.getParameter("contact_number"));
 		String order_type = request.getParameter("order_type");
 		String plan = request.getParameter("plan");
-		
+		String plan_name=request.getParameter("plan_name");
+		//String plan_name=request.getpara
+		System.out.println("gaghjplan_name="+plan_name);
 		
 		
 		Address billingAddr = new Address(street, zip, city,state, stateid, country);
@@ -92,8 +94,8 @@ public class RegistrationServlet extends HttpServlet {
 		CustomerDetails customerdetails = new CustomerDetails(cust_type, cust_id, fname, lname, billingAddr, connAddr, email, contact, outFormat.format(dob));
 		
 		Quantity qty = new Quantity(1,1);		
-		Services services = new Services("b2003","pi_vi_250_250_225",qty);
-		
+		//Services services = new Services("b2003","pi_vi_250_250_225",qty);
+		Services services = new Services(plan,plan_name,qty);
 		ContractDetails contractdetails = new ContractDetails("", "", "", "", "", 0, "null");		
 		OrderDetails orderdetails = new OrderDetails(outFormat.format(date), outFormat.format(date), services);
 		System.out.println(outFormat.format(date));

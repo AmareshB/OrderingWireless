@@ -114,7 +114,7 @@
                                       <label class="sr-only">Email address</label>
                                       <input type="email" class="form-control" id="email" placeholder="Enter email" name="mail">
                                       <br>
-                                      <label class="col-lg-12"><style:center>or</style:center></label>
+                                      <label class="col-lg-12"><style:center></style:center></label>
                                   </div>
                                   <br>
                                  

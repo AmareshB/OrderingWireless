@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	//$(document).ready(setTimeout(function(){alert('Hello')},3000)
+	//);
 //get the form data and then serialize that
 //dataString = $("#someform").serialize();
 
